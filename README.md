@@ -4,12 +4,25 @@
 
 > making to-do-list application using Vanilla Javascript <br> 바닐라 자바스크립트 사용법을 익히자!
 
-### 1. Variable 변수
+#### 1. 변수, let
 
     Create, Initialize, Use
-    - let
 
-### 2. Constant 상수
+#### 2. 상수, const
 
     Stable, dosen't changed
-    -const
+
+#### 3. 자료형
+
+    string, boolean, number, float...
+
+#### 4. 배열
+
+    index, starting num is 0
+    모든 자료형, 변수 다 넣을 수 있다.
+    `const array = []`
+
+#### 5. Object
+
+    * 배열과 오브젝트의 쓰임을 분리할 줄 알아야 한다.
+    `const obj = {}`
