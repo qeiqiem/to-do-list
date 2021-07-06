@@ -35,23 +35,23 @@
           const obj = {}
 
 -   오브젝트 안의 배열, 오브젝트의 배열 안의 오브젝트
-    const info ={
-    name : kim,
-    gender : female,
-    favMovies : ["LOTR", "Harrypotter"],
-    FavFood : [
-    {
-    name : hamburger,
-    location : McDonalds
-    },
-    {
-    name : coffee,
-    location : glin
-    }
-    ]
-    }
+
+            const info ={
+            name : kim,
+            gender : female,
+            favMovies : ["LOTR", "Harrypotter"],
+            FavFood : [
+            {
+            name : hamburger,
+            location : McDonalds
+            },
+            {
+            name : coffee,
+            location : glin
+            }
+            ]
+            }
 
 -   배열과 오브젝트의 쓰임을 분리할 줄 알아야 한다.
-
-*   DB에서 데이터 리스트만 뽑아온다면 Array
-*   만약 데이터를 합쳐 만들어야 한다면 Object
+    -   DB에서 데이터 리스트만 뽑아온다면 Array
+    -   만약 데이터를 합쳐 만들어야 한다면 Object
