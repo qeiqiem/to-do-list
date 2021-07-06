@@ -20,9 +20,13 @@
 
     index, starting num is 0
     모든 자료형, 변수 다 넣을 수 있다.
-    `const array = []`
+    ```javascript
+    const array = []
+    ```
 
 #### 5. Object
 
     * 배열과 오브젝트의 쓰임을 분리할 줄 알아야 한다.
-    `const obj = {}`
+    ```javascript
+    const obj = {}
+    ```
