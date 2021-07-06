@@ -20,37 +20,37 @@
 
 ### 4. 배열
 
+        const array = []
+
 -   index, starting num is 0
 -   모든 자료형, 변수 다 넣을 수 있다.
 
-        const array = []
-
 ### 5. Object
+
+          const obj = {}
 
 -   value로 배열이 들어갈 수 있다.
 -   value로 오브젝트가 들어갈 수 있다. 즉 오브젝트안의 오브젝트
 -   , 빼 먹지 않도록 주의!
 -   "" , {}, [] quotes, 괄호 닫기 주의!
-
-          const obj = {}
-
 -   오브젝트 안의 배열, 오브젝트의 배열 안의 오브젝트
 
             const info ={
-            name : kim,
-            gender : female,
-            favMovies : ["LOTR", "Harrypotter"],
-            FavFood : [
-            {
-            name : hamburger,
-            location : McDonalds
-            },
-            {
-            name : coffee,
-            location : glin
+              name : kim,
+              gender : female,
+              favMovies : ["LOTR", "Harrypotter"],
+              FavFood : [
+                  {
+                        name : hamburger,
+                        location : McDonalds
+                  },
+                  {
+                    name : coffee,
+                    location : glin
+                  }
+              ]
             }
-            ]
-            }
+
 
 -   배열과 오브젝트의 쓰임을 분리할 줄 알아야 한다.
     -   DB에서 데이터 리스트만 뽑아온다면 Array
