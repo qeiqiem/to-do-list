@@ -21,7 +21,7 @@ index, starting num is 0
     ```
 
 #### 5. Object
-* 배열과 오브젝트의 쓰임을 분리할 줄 알아야 한다.
+  * 배열과 오브젝트의 쓰임을 분리할 줄 알아야 한다.
     ```javascript
     const obj = {}
     ```
