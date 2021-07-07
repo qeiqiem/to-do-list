@@ -51,7 +51,39 @@
               ]
             }
 
-
 -   배열과 오브젝트의 쓰임을 분리할 줄 알아야 한다.
     -   DB에서 데이터 리스트만 뽑아온다면 Array
     -   만약 데이터를 합쳐 만들어야 한다면 Object
+
+### 6. function 함수
+
+      function name(param, param, ...){
+
+      };
+      name(args, args, ...);
+
+-   함수의 리턴
+
+```javascript
+// calculator HW
+const calculrator = {
+    plus: (a, b) => a + b,
+    minus: (a, b) => a - b,
+    mult: (a, b) => a * b,
+    divided: (a, b) => a / b,
+    power: (a, b) => a ** b,
+};
+
+// const plus = calculrator.plus(4,2);
+const plus = (a, b) =>
+    document.write(calculrator.plus(a, b) + '</br>');
+plus(4, 2);
+
+const minus = document.write(calculrator.minus(2, 4));
+document.write('<br>');
+
+const mult = (a, b) => document.write(calculrator.mult(a, b));
+mult(5, 9);
+
+document.write('<br>');
+```
