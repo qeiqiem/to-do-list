@@ -1,20 +1,21 @@
-# to-do-list
+# To-Do-List
 
-[Nomad Coder 초보자를 위한 바닐라 자바스크립트](https://youtu.be/wUHncG3VwPw)
+[Nomad Coder 초보자를 위한 바닐라 자바스크립트](https://youtu.be/wUHncG3VwPw) (old ver.) <br>
+[바닐라 JS로 크롬 앱 만들기](https://nomadcoders.co/javascript-for-beginners/lectures/2866) (updated)
 
-> making to-do-list application using Vanilla Javascript
-> 바닐라 자바스크립트 사용법을 익히자!
+> making to-do-list application using Vanilla Javascript <br> 바닐라 자바스크립트 사용법을 익히자!
+
+<br>
 
 ## OMG. (21/07/08)
 
-I JUST GOT FOUND THE COURSE WAS UPDATED TO 2021 VERSION.
+I JUST GOT FOUND THE COURSE WAS UPDATED TO 2021 VERSION. <br>
 I THINK I NEED TO DO IT AGAIN WITH THE NEW VERSION...
-
 So, ... Let's get started...!
 
 <hr>
 
-## 1-1 ~ 1-10 (Old Ver.)
+## Thoery (old ver.)
 
 ### 1. 변수, let
 
