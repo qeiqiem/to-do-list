@@ -235,3 +235,31 @@ if (age === 100) {
 
 // Or, else if가 아닌 다른 if문으로 분기하면 두가지 모두 실행할 수 있게 된다.
 ```
+
+### addEventListener()
+
+-   어떠한 이벤트를 실행하기 위함
+
+```javascript
+const title = document.querySelector('div.hello:first-child hi');
+
+// 이벤트에 할당할 함수
+function handleClick() {
+    alert('Clicked!');
+}
+
+// "click" 이벤트를 발생시키겠다.
+// click -> function 실행
+title.addEventListener('click', handleClick);
+
+// "function()"으로 호출하면 클릭 시에 함수가 호출되는 것이 아니라 즉시 실행이 된다.
+
+// 아래와 같은 로직으로 실행됨
+function handleClick() {
+    alert('Clicked!');
+}
+handleClick();
+
+// 클릭 시 실행하고 싶다면 "function"으로 함수 이름만 기입해야 한다.
+// js로 내가 원하는 타이밍을 제어하는 것
+```
