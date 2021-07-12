@@ -263,3 +263,17 @@ handleClick();
 // 클릭 시 실행하고 싶다면 "function"으로 함수 이름만 기입해야 한다.
 // js로 내가 원하는 타이밍을 제어하는 것
 ```
+
+### More Events...
+
+-   MDN 사이트에서 적용 가능한 이벤트가 어떤 것이 있는지 검색해보자.
+-   addEventListener()형태가 아닌 해당 이벤트 이름으로 똑같은 효과를 적용시킬 수 있다.
+
+```javascript
+// ex)
+title.addEventListener('click', handleClick);
+// 이 형태는 아래와 같은 작용
+title.onClick = handleClick;
+
+// but, add~형태는 removeEventListener을 통해서 eventListener을 제거할 수 있어 컨트롤이 더 편리함 (개인에 따라..)
+```
