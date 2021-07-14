@@ -9,7 +9,12 @@ const loginInput = document.querySelector('#login-form input');
 const loginButton = document.querySelector('#login-form button');
 
 function onLoginBtnClcik() {
-    alert('clickedz');
+    const userName = loginInput.value;
+    // if (userName === '') {
+    //     alert('Please write your name');
+    // } else if (userName.length > 15) {
+    //     alert('Your name is toooo long!');
+    // }
 }
 
 loginButton.addEventListener('click', onLoginBtnClcik);

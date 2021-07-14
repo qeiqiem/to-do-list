@@ -10,11 +10,16 @@
 </head>
 
 <body>
-
-    <div id="login-form">
-        <input type="text" placeholder="What is your Name?">
+    <form id="login-form">
+        <!-- input required 
+             : 필수 조건에 required를 걸면 꼭 입력하도록 할 수 있다. ㅠㅠ ㅠㅠㅠ -->
+        <!-- 이 기능들이 유효하려면 !!form!!안에 input이 있어야 한다.-->
+        <input required maxlength="15" type="text" placeholder="What is your Name?">
+        <!-- form안의 button은 submit역할을 자동적으로 한다. -->
+        <!-- 그래서 더 이상 입력할 input창이 없는 form에서 input:submit OR button이 있다면
+               enter or click 시 자동으로 submit 후 refresh.-->
         <button>LOGIN</button>
-    </div>
+    </form>
 
     <!-- <div class="js-clock">
         <h1>00:00</h1>
