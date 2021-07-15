@@ -43,6 +43,7 @@ const savedUser = localStorage.getItem(USERNAME_KEY);
 
 function paintGreetings() {
     const userName = localStorage.getItem(USERNAME_KEY);
+    // 다시 있는지 찾아줘야한다...
     greeting.innerText = `Hello, ${userName}!`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
