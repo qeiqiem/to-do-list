@@ -12,7 +12,14 @@
 <body>
     <form id="login-form">
         <!-- input required 
-             : 필수 조건에 required를 걸면 꼭 입력하도록 할 수 있다. ㅠㅠ ㅠㅠㅠ -->
+             : 필수 조건에 required를 걸면 꼭 입력하도록 할 수 있다. ㅠㅠ ㅠㅠㅠ 
+               아래처럼 js로 조건을 걸지 않아도 그 역할을 할 수 있다.
+                // if (userName === '') {
+                //     alert('Please write your name');
+                    // } else if (userName.length > 15) {
+                    //     alert('Your name is toooo long!');
+                    // }
+            -->
         <!-- 이 기능들이 유효하려면 !!form!!안에 input이 있어야 한다.-->
         <input required maxlength="15" type="text" placeholder="What is your Name?">
         <!-- form안의 button은 submit역할을 자동적으로 한다. -->
