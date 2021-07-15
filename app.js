@@ -30,22 +30,25 @@ function onLoginSubmit(event) {
     // console.log(event)로 어떤 이벤트가 실행됐는지 알 수 있음
 
     loginForm.classList.add(HIDDEN_CLASSNAME);
-    const userName = loginInput.value;
 
     // localStroage
+
     // localStorage에 userName info가 있다면 form을 표기하지 않음
-    localStorage.setItem(USERNAME_KEY, userName);
+    localStorage.setItem(USERNAME_KEY, loginInput.value);
     // greeting.innerText = `Hello, ${userName}!`;
     // greeting.classList.remove(HIDDEN_CLASSNAME);
-    paintGreetings(userName);
+    paintGreetings();
 }
+const savedUser = localStorage.getItem(USERNAME_KEY);
 
-function paintGreetings(userName) {
+function paintGreetings() {
+    const userName = localStorage.getItem(USERNAME_KEY);
     greeting.innerText = `Hello, ${userName}!`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
-
-const savedUser = localStorage.getItem(USERNAME_KEY);
+// 사실 이 함수는 인자를 받을 필요가 없다.
+// LS에 저장된 이름을 넘겨주기만 하면 되니까 (이미 스토리지에 info already existed)
+// ==> savedUser
 
 if (savedUser == null) {
     loginForm.classList.remove(HIDDEN_CLASSNAME);
@@ -62,6 +65,6 @@ if (savedUser == null) {
     // greeting.classList.remove(HIDDEN_CLASSNAME);
     // ==> 이 과정을 위에서도 반복하기 때문에 함수로 따로 빼준다.
 
-    paintGreetings(savedUser);
-    // LS에 저장된 정보를 인자로 넘겨줌
+    paintGreetings();
+    // LS에 저장된 정보를 인자로 넘겨줌 (인자로 넘겨줄때의 코드. 변경됨.)
 }
