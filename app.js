@@ -43,7 +43,7 @@ const savedUser = localStorage.getItem(USERNAME_KEY);
 
 function paintGreetings() {
     const userName = localStorage.getItem(USERNAME_KEY);
-    // 다시 있는지 찾아줘야한다...
+    // 다시 있는지 찾아줘야한다... but 42번 라인에 이어 두번씩 로컬스토리지를 찾는 격이니, 개인의 선호에 따라 param을 전달하는 코드 or 아닌 코드로 작성하면 된다.
     greeting.innerText = `Hello, ${userName}!`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
 }
