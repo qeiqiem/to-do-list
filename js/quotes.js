@@ -40,3 +40,21 @@ const quotes = [
         author: "Anne Frank",
     },
 ];
+
+const quote = document.querySelector("#quote span:first-child");
+const author = document.querySelector("#quote span:last-child");
+
+// console.log(quotes[quotes.length - 1]);
+
+/* Math
+Math.random() : 0-1 사이 소수점이 붙은 숫자를 반환
+Math.round(1.2) ==> 1 : 소수점 반올림
+Math.ceil(1.2) ==> 2 : 올림
+Math.floor(1.9) ==> 1 : 내림
+*/
+
+const todayQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+// console.log(todayQuote);
+quote.innerText = todayQuote.quotes;
+author.innerText = todayQuote.author;
