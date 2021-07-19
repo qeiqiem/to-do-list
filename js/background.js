@@ -14,3 +14,5 @@ const bgImg = document.createElement("img");
 bgImg.src = `img/${todayBg}`;
 
 document.body.appendChild(bgImg);
+// append : 가장 뒤에 추가
+// prepend : 가장 앞에 추가
