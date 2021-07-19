@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -27,9 +27,15 @@
                enter or click 시 자동으로 submit 후 refresh.-->
         <button>LOGIN</button>
     </form>
+    <h2 id="clock">00:00</h2> <!-- default-->
     <h1 id="greeting" class="hidden"></h1>
-
-    <script src="app.js"></script>
+    <div id="quote">
+        <span></span>
+        <span></span>
+    </div>
+    <script src="js/greeting.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
 </body>
 
 </html>
