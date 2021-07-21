@@ -5,17 +5,19 @@
 // const loginInput = loginForm.querySelector('input');
 // const loginButton = loginForm.querySelector('button');
 
-const loginForm = document.querySelector('#login-form');
-const loginInput = document.querySelector('#login-form input');
-const greeting = document.querySelector('#greeting');
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
+const greeting = document.querySelector("#greeting");
 
 // * uppercase
 // string만 포함한 변수를 담을 때는 대문자로 변수이름을 짓는다. (관습)
 // login~, greeting처럼 중요한 정보를 담은 게 아니기 때문에
 
 // 반복되는 것들은 변수로 지정해주자.
-const HIDDEN_CLASSNAME = 'hidden';
-const USERNAME_KEY = 'userName';
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "userName";
+
+const savedUser = localStorage.getItem(USERNAME_KEY);
 
 function onLoginSubmit(event) {
     // default 동작 : submit -> refresh 방지!
@@ -39,7 +41,6 @@ function onLoginSubmit(event) {
     // greeting.classList.remove(HIDDEN_CLASSNAME);
     paintGreetings();
 }
-const savedUser = localStorage.getItem(USERNAME_KEY);
 
 function paintGreetings() {
     const userName = localStorage.getItem(USERNAME_KEY);
@@ -54,7 +55,7 @@ function paintGreetings() {
 if (savedUser == null) {
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     // 단독으로 실행했던 코드를 실행코드에 맞게 넣어줌
-    loginForm.addEventListener('submit', onLoginSubmit);
+    loginForm.addEventListener("submit", onLoginSubmit);
     // ex
     // click으로 조건을 걸 때, 내 마우스의 x, y 어느 시점에 클릭을 했는지도 알 수 있다. => js가 제공해주는 Free info!
     // console.dir로 어떤 동작을 갖는지 알 수 있음.
