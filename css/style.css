@@ -1,3 +1,13 @@
+:root {
+    /* color */
+    --white-opacity: rgb(255, 255, 255, 0.8);
+    --box-shadow: 10px 5px 8px rgba(54, 54, 54, 0.384);
+    --opacity: 0.7;
+    --opacity-lower: 0.5;
+    /* measure */
+    --radious: 15px;
+}
+
 * {
     font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
@@ -11,13 +21,14 @@ body {
 input {
     background: none;
     border: none;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid var(--white-opacity);
     outline: none;
     font-size: 3rem;
+    color: white;
 }
 
 input::placeholder {
-    color: white;
+    color: var(--white-opacity);
 }
 
 a {
@@ -28,6 +39,7 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
 .sticky {
     /* width: 300px;
     height: 100px; */
@@ -35,10 +47,9 @@ a:hover {
     top: 300px;
     padding: 20px;
     padding-top: 50px;
-    /* background-color: rgb(255, 255, 255, 0.5); */
-    background-color: rgb(255, 255, 255, 0.8);
-    box-shadow: 10px 5px 8px rgba(54, 54, 54, 0.384);
-    border-radius: 15px;
+    background-color: var(--white-opacity);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--radious);
     cursor: move;
 }
 
@@ -50,9 +61,9 @@ a:hover {
     top: 0;
     left: 0;
     padding: 10px;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    opacity: 0.7;
+    border-top-left-radius: var(--radious);
+    border-top-right-radius: var(--radious);
+    opacity: var(--opacity);
     font-size: smaller;
 }
 
@@ -88,7 +99,7 @@ a:hover {
     top: 20px;
     right: 32px;
     color: white;
-    opacity: 70%;
+    opacity: var(--opacity);
     font-style: italic;
 }
 #quote {
@@ -98,7 +109,7 @@ a:hover {
 
 #quote span:nth-child(3) {
     font-style: italic;
-    opacity: 0.6;
+    opacity: var(--opacity-lower);
     right: 0;
 }
 
@@ -144,6 +155,7 @@ a:hover {
     border-radius: 30px;
     margin-right: 20px;
     position: absolute;
+    z-index: 100;
 }
 
 #todo-list li > span {
@@ -156,7 +168,7 @@ a:hover {
 .checked {
     text-decoration: line-through;
     font-style: italic;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, var(--opacity-lower));
 }
 
 .test {

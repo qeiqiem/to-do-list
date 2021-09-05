@@ -27,7 +27,14 @@ function saveToDo() {
 function paintToDo(newToDoObj) {
     const li = document.createElement("li");
     li.id = newToDoObj.id; //어떤 li를 지울건지 파악하기 위해 random으로 정해지는 id값을 li에 부여해줌
-    li.innerHTML = "<div></div>";
+
+    const checkBox = document.createElement("div");
+
+    // const check = document.querySelector("#todo-list div");
+    checkBox.addEventListener("click", checkedToDo);
+
+    // li.innerHTML = "<div></div>";
+
     const span = document.createElement("span");
     span.innerHTML += newToDoObj.text;
     // span.innerText = newToDoObj.text;
@@ -38,6 +45,7 @@ function paintToDo(newToDoObj) {
 
     const hr = document.createElement("hr");
 
+    li.appendChild(checkBox);
     li.appendChild(span);
     li.appendChild(button);
     li.appendChild(hr);
@@ -82,6 +90,12 @@ function deleteToDo(event) {
     saveToDo(); // 필수!!!!
 }
 
+function checkedToDo(event) {
+    console.log(event.target.parentElement.innerText);
+    const li = event.target.parentElement;
+    li.classList.toggle("checked");
+}
+
 /* filter 를 이용해서 새로운 array로 덮어쓰기를 한다. (pop을 쓸 수 없으니까.. )
 filter는 forEach 로직처럼 작동한다.
 반복적으로 해당 함수를 호출해서 배열의 index를 순차적으로 대입한다.
@@ -100,8 +114,6 @@ if (SavedToDos) {
 //     console.log("name", item);
 // 순차적으로 지금 처리되는 아이템이 무엇인지 알 수 있음. event처럼 js가 제공해주는 기능!
 // }
-
-////////////////// 내가 추가하고 싶은 코드 //////////////
 
 if (savedUser === null) {
     toDoForm.classList.add("hidden");
