@@ -7,6 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;1,300;1,500;1,600&display=swap"
+        rel="stylesheet">
+
+    <script defer src="js/stickyHandler.js"></script>
+    <script defer src="js/sticky.js"></script>
+
+    <script defer src="js/greeting.js"></script>
+    <script defer src="js/clock.js"></script>
+    <script defer src="js/quotes.js"></script>
+    <script defer src="js/background.js"></script>
+    <script defer src="js/todo.js"></script>
+    <script defer src="js/weather.js"></script>
+
 </head>
 
 <body>
@@ -27,28 +43,77 @@
                enter or click 시 자동으로 submit 후 refresh.-->
         <button>LOGIN</button>
     </form>
-    <h2 id="clock">00:00</h2> <!-- default-->
-    <h1 id="greeting" class="hidden"></h1>
-
-    <!-- 리스트 -->
-    <form action="" id="todo-form">
-        <input required type="text" placeholder="What to do?">
-    </form>
-    <ul id="todo-list"></ul>
-
-    <!-- 명언 -->
-    <div id="quote">
-        <span></span> <br>
-        <span></span>
+    <div class="sticky">
+        <div class="stickyTitle">WHAT TIME IS IT NOW?</div>
+        <h2 id="clock">00:00</h2>
     </div>
 
+    <div class="sticky">
+        <div class="stickyTitle">
+            WELCOME
+        </div>
+        <h1 id="greeting" class="hidden"></h1>
+    </div>
+
+    <form id="todo-form">
+        <input required type="text" placeholder="What to do?">
+    </form>
+    <div class="sticky test">
+        <div class="stickyTitle">TO DO LIST</div>
+        <ul id="todo-list">
+        </ul>
+    </div>
+
+    <div class="sticky">
+        <div class="stickyTitle">TODAY'S QUOTE</div>
+        <div id="quote" class="stickyContents">
+            <span></span> <br>
+            <span></span>
+        </div>
+    </div>
+    <div class="sticky copyright">
+        <div class="stickyTitle">THIS IS BUILT BY</div>
+
+        <h2>
+            <a target="_blank" href="https://qeiqiem.github.io/kim-portfolio/">KIM GA KYEONG</a>
+        </h2>
+
+    </div>
+
+    <div class="sticky copyright">
+        <div class="stickyTitle"></div>
+
+
+    </div>
+
+    <div class="sticky copyright">
+        <div class="stickyTitle"></div>
+
+
+    </div>
+
+    <div class="sticky copyright">
+        <div class="stickyTitle"></div>
+
+
+    </div>
+
+
+    <div class="sticky emoji">🌞</div>
+    <div class="sticky emoji">👩‍💻</div>
+    <div class="sticky emoji">❤️‍🔥</div>
+    <div class="sticky emoji">✈️</div>
+    <div class="sticky emoji">🌷</div>
+
+    <!-- FIXED -->
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div>
+    <div id="bg-container"></div>
     <!-- <img id="bgImg" src="img/bg1.JPG">  js로 추가되는 부분-->
 
-    <script src="js/greeting.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/todo.js"></script>
+
 </body>
 
 </html>

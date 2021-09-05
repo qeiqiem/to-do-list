@@ -27,16 +27,20 @@ function saveToDo() {
 function paintToDo(newToDoObj) {
     const li = document.createElement("li");
     li.id = newToDoObj.id; //어떤 li를 지울건지 파악하기 위해 random으로 정해지는 id값을 li에 부여해줌
-
+    li.innerHTML = "<div></div>";
     const span = document.createElement("span");
-    span.innerText = newToDoObj.text;
+    span.innerHTML += newToDoObj.text;
+    // span.innerText = newToDoObj.text;
 
     const button = document.createElement("button");
-    button.innerText = "❌";
+    button.innerText = "🗑";
     button.addEventListener("click", deleteToDo);
+
+    const hr = document.createElement("hr");
 
     li.appendChild(span);
     li.appendChild(button);
+    li.appendChild(hr);
     toDoList.appendChild(li);
 }
 
@@ -49,10 +53,13 @@ function handleToDoSubmit(event) {
         text: newToDo,
         id: Date.now(),
     };
-
-    toDos.push(newToDoObj); //toDos Array에 저장 (LS에 저장하기 위해)
-    paintToDo(newToDoObj); // todo list를 생성해서 보이게 함
-    saveToDo(); // todos LS에 svae
+    if (toDos.length > 10) {
+        alert("TOO MUCH THINGS TO DO! Please delete some others...");
+    } else {
+        toDos.push(newToDoObj); //toDos Array에 저장 (LS에 저장하기 위해)
+        paintToDo(newToDoObj); // todo list를 생성해서 보이게 함
+        saveToDo(); // todos LS에 svae
+    }
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
@@ -93,3 +100,13 @@ if (SavedToDos) {
 //     console.log("name", item);
 // 순차적으로 지금 처리되는 아이템이 무엇인지 알 수 있음. event처럼 js가 제공해주는 기능!
 // }
+
+////////////////// 내가 추가하고 싶은 코드 //////////////
+
+if (savedUser === null) {
+    toDoForm.classList.add("hidden");
+    toDoList.classList.add("hidden");
+} else {
+    toDoForm.classList.remove("hidden");
+    toDoList.classList.remove("hidden");
+}
