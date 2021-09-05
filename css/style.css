@@ -16,12 +16,18 @@
 body {
     margin: 0;
     position: relative;
+    overflow: hidden;
 }
 
 input {
     background: none;
     border: none;
     border-bottom: 2px solid var(--white-opacity);
+    /* border: 2px solid var(--white-opacity); */
+    /* border-radius: 50px;
+    width: 600px;
+    padding: 15px 30px; */
+
     outline: none;
     font-size: 3rem;
     color: white;
@@ -40,7 +46,13 @@ a:hover {
     text-decoration: underline;
 }
 
+h1,
+h2 {
+    text-align: center;
+}
+
 .sticky {
+    min-width: 300px;
     /* width: 300px;
     height: 100px; */
     position: absolute;
@@ -76,9 +88,28 @@ a:hover {
     box-shadow: none;
 }
 
-/* hidden */
-.hidden {
-    display: none;
+#video-container video {
+    max-width: 500px;
+    max-height: 500px;
+}
+
+#login-form button {
+    position: absolute;
+    top: -4px;
+    margin-left: -30px;
+    /* margin-left: 10px; */
+    border: none;
+    border-radius: 50px;
+    background: var(--white-opacity);
+    padding: 18px 22px;
+    font-size: 25px;
+    font-weight: bolder;
+    cursor: pointer;
+    /* box-shadow: var(--box-shadow); */
+}
+
+#login-form button:hover {
+    opacity: var(--opacity);
 }
 
 #bg-container {
@@ -144,14 +175,16 @@ a:hover {
     background: none;
     border: 1px solid rgba(204, 204, 204, 0.514);
     border-radius: 1px;
+    width: 250px;
+    margin-left: 48px;
 }
 
 #todo-list li > div {
     display: inline-block;
-    background-color: red;
+    background-color: none;
     width: 30px;
     height: 30px;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     border-radius: 30px;
     margin-right: 20px;
     position: absolute;
@@ -165,13 +198,28 @@ a:hover {
     /* padding-top: 6px; */
 }
 
+/* hidden */
+.hidden {
+    display: none;
+}
+
 .checked {
     text-decoration: line-through;
     font-style: italic;
     color: rgba(0, 0, 0, var(--opacity-lower));
 }
-
-.test {
-    left: 118px;
-    top: 101px;
+.checkedBox {
+    background-color: rgba(138, 138, 138, 0.555);
 }
+
+/* ul,
+li,
+form,
+input,
+h1,
+h2,
+span,
+button,
+hr {
+    z-index: inherit;
+} */

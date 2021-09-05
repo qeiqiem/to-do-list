@@ -91,9 +91,11 @@ function deleteToDo(event) {
 }
 
 function checkedToDo(event) {
-    console.log(event.target.parentElement.innerText);
     const li = event.target.parentElement;
+    const checkBox = li.querySelector("div");
+
     li.classList.toggle("checked");
+    checkBox.classList.toggle("checkedBox");
 }
 
 /* filter 를 이용해서 새로운 array로 덮어쓰기를 한다. (pop을 쓸 수 없으니까.. )
@@ -115,10 +117,5 @@ if (SavedToDos) {
 // 순차적으로 지금 처리되는 아이템이 무엇인지 알 수 있음. event처럼 js가 제공해주는 기능!
 // }
 
-if (savedUser === null) {
-    toDoForm.classList.add("hidden");
-    toDoList.classList.add("hidden");
-} else {
-    toDoForm.classList.remove("hidden");
-    toDoList.classList.remove("hidden");
-}
+// toDoForm.classList.remove("hidden");
+// toDoList.classList.remove("hidden");

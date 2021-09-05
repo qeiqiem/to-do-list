@@ -1,0 +1,64 @@
+.default {
+    position: absolute;
+    top: 20px;
+    left: 32px;
+}
+
+.clock {
+    left: 100px;
+    top: 103px;
+}
+
+.name {
+    left: 548px;
+    top: 110px;
+}
+
+.quote {
+    left: 156px;
+    top: 309px;
+}
+.list {
+    left: 813px;
+    top: 211px;
+}
+.copyright {
+    left: 49px;
+    top: 641px;
+}
+.photos {
+    left: 45px;
+    top: 410px;
+}
+.video {
+    left: 702px;
+    top: 343px;
+}
+.e1 {
+    left: 72px;
+    top: 313px;
+}
+.e2 {
+    left: 862px;
+    top: 98px;
+}
+.e3 {
+    left: 262px;
+    top: 718px;
+    font-size: 150px;
+}
+.e4 {
+    left: 447px;
+    top: 502px;
+}
+.e5 {
+    left: 1071px;
+    top: 141px;
+}
+
+.order14 {
+}
+.order15 {
+}
+.order16 {
+}

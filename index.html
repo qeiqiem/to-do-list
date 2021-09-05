@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/order.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,16 +18,17 @@
     <script defer src="js/sticky.js"></script>
 
     <script defer src="js/greeting.js"></script>
+    <script defer src="js/todo.js"></script>
+    <script defer src="js/background.js"></script>
+    <script defer src="js/video.js"></script>
+    <script defer src="js/weather.js"></script>
     <script defer src="js/clock.js"></script>
     <script defer src="js/quotes.js"></script>
-    <script defer src="js/background.js"></script>
-    <script defer src="js/todo.js"></script>
-    <script defer src="js/weather.js"></script>
 
 </head>
 
 <body>
-    <form id="login-form" class="hidden">
+    <form id="login-form" class="hidden default">
         <!-- input required 
              : 필수 조건에 required를 걸면 꼭 입력하도록 할 수 있다. ㅠㅠ ㅠㅠㅠ 
                아래처럼 js로 조건을 걸지 않아도 그 역할을 할 수 있다.
@@ -41,30 +43,33 @@
         <!-- form안의 button은 submit역할을 자동적으로 한다. -->
         <!-- 그래서 더 이상 입력할 input창이 없는 form에서 input:submit OR button이 있다면
                enter or click 시 자동으로 submit 후 refresh.-->
-        <button>LOGIN</button>
+        <!-- <button>LOGIN</button> -->
     </form>
-    <div class="sticky">
-        <div class="stickyTitle">WHAT TIME IS IT NOW?</div>
-        <h2 id="clock">00:00</h2>
-    </div>
 
-    <div class="sticky">
-        <div class="stickyTitle">
-            WELCOME
-        </div>
-        <h1 id="greeting" class="hidden"></h1>
-    </div>
-
-    <form id="todo-form">
+    <form id="todo-form" class="default hidden">
         <input required type="text" placeholder="What to do?">
     </form>
-    <div class="sticky test">
+
+
+    <div class="sticky list">
         <div class="stickyTitle">TO DO LIST</div>
         <ul id="todo-list">
         </ul>
     </div>
 
-    <div class="sticky">
+    <div class="sticky clock">
+        <div class="stickyTitle">WHAT TIME IS IT NOW?</div>
+        <h2 id="clock">00:00</h2>
+    </div>
+
+    <div class="sticky name hidden" id="name">
+        <div class="stickyTitle">
+            WELCOME
+        </div>
+        <h1 id="greeting"></h1>
+    </div>
+
+    <div class="sticky quote">
         <div class="stickyTitle">TODAY'S QUOTE</div>
         <div id="quote" class="stickyContents">
             <span></span> <br>
@@ -80,30 +85,25 @@
 
     </div>
 
-    <div class="sticky copyright">
-        <div class="stickyTitle"></div>
-
-
+    <div class="sticky video">
+        <div class="stickyTitle">MEMORIES.MP4</div>
+        <div id="video-container">
+            <video loop controls autoplay muted src="video/vi1.mp4"></video>
+        </div>
     </div>
 
-    <div class="sticky copyright">
-        <div class="stickyTitle"></div>
-
-
-    </div>
-
-    <div class="sticky copyright">
-        <div class="stickyTitle"></div>
-
+    <div class="sticky photos">
+        <div class="stickyTitle">PHOTOS</div>
+        <p>The background photos are taken in New York, 2019. <br>These are my love, sunshine and memories.</p>
 
     </div>
 
 
-    <div class="sticky emoji">🌞</div>
-    <div class="sticky emoji">👩‍💻</div>
-    <div class="sticky emoji">❤️‍🔥</div>
-    <div class="sticky emoji">✈️</div>
-    <div class="sticky emoji">🌷</div>
+    <div class="sticky emoji e1">🌞</div>
+    <div class="sticky emoji e2">👩‍💻</div>
+    <div class="sticky emoji e3">❤️‍🔥</div>
+    <div class="sticky emoji e4">✈️</div>
+    <div class="sticky emoji e5">🌷</div>
 
     <!-- FIXED -->
     <div id="weather">

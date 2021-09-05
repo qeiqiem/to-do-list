@@ -8,6 +8,7 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
+const welcome = document.getElementById("name");
 
 // * uppercase
 // string만 포함한 변수를 담을 때는 대문자로 변수이름을 짓는다. (관습)
@@ -44,15 +45,20 @@ function onLoginSubmit(event) {
 
 function paintGreetings() {
     const userName = localStorage.getItem(USERNAME_KEY);
+    const toDoForm = document.getElementById("todo-form");
     // 다시 있는지 찾아줘야한다... but 42번 라인에 이어 두번씩 로컬스토리지를 찾는 격이니, 개인의 선호에 따라 param을 전달하는 코드 or 아닌 코드로 작성하면 된다.
     greeting.innerText = `Hello, ${userName}!`;
-    greeting.classList.remove(HIDDEN_CLASSNAME);
+    // greeting.classList.remove(HIDDEN_CLASSNAME);
+    welcome.classList.remove(HIDDEN_CLASSNAME);
+
+    // 여기서 실행하니까 바로 뜸
+    toDoForm.classList.remove("hidden");
 }
 // 사실 이 함수는 인자를 받을 필요가 없다.
 // LS에 저장된 이름을 넘겨주기만 하면 되니까 (이미 스토리지에 info already existed)
 // ==> savedUser
 
-if (savedUser == null) {
+if (savedUser === null) {
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     // 단독으로 실행했던 코드를 실행코드에 맞게 넣어줌
     loginForm.addEventListener("submit", onLoginSubmit);
