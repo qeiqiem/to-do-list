@@ -8,6 +8,7 @@
     --radious: 15px;
 }
 
+/* ******* default tags ******** */
 * {
     font-family: "Montserrat", sans-serif;
     box-sizing: border-box;
@@ -51,6 +52,7 @@ h2 {
     text-align: center;
 }
 
+/* ******* sticky frame ******** */
 .sticky {
     min-width: 300px;
     /* width: 300px;
@@ -79,6 +81,7 @@ h2 {
     font-size: smaller;
 }
 
+/* ******* elements ******** */
 .emoji {
     font-size: 100px;
     background: none;
@@ -199,11 +202,7 @@ h2 {
     /* padding-top: 6px; */
 }
 
-/* hidden */
-.hidden {
-    display: none;
-}
-
+/* ******* to-do check Box ******** */
 .checked {
     text-decoration: line-through;
     font-style: italic;
@@ -212,6 +211,11 @@ h2 {
 .checkedBox {
     background-color: rgba(138, 138, 138, 0.555);
     /* cursor: pointer; */
+}
+
+/* ******* hidden ******** */
+.hidden {
+    display: none;
 }
 
 /* ul,

@@ -31,9 +31,11 @@
     top: 410px;
 }
 .video {
-    left: 702px;
-    top: 343px;
+    left: 1026px;
+    top: 310px;
 }
+
+/* ***********emoji*********** */
 .e1 {
     left: 72px;
     top: 313px;
@@ -54,11 +56,4 @@
 .e5 {
     left: 1071px;
     top: 141px;
-}
-
-.order14 {
-}
-.order15 {
-}
-.order16 {
 }
