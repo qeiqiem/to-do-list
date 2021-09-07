@@ -154,6 +154,17 @@ h2 {
     margin: 20px 0;
 }
 
+#todo-form button {
+    font-size: 90px;
+    background: none;
+    border: none;
+    position: absolute;
+    font-weight: lighter;
+    color: var(--white-opacity);
+    top: -25px;
+    right: 0px;
+    cursor: pointer;
+}
 /********** to do list *********/
 #todo-list {
     width: 310px;

@@ -18,7 +18,9 @@ function onGeoSuccess(position) {
                 "#weather span:last-child"
             );
 
-            weather.innerText = `${data.weather[0].main}, ${data.main.temp}℃`;
+            weather.innerText = `${
+                data.weather[0].main
+            }, ${Math.round(data.main.temp)}℃`;
             city.innerText = ` @${data.name}`;
         });
 

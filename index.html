@@ -24,10 +24,13 @@
     <script defer src="js/weather.js"></script>
     <script defer src="js/clock.js"></script>
     <script defer src="js/quotes.js"></script>
+    <script defer type="text/javascript">
+        document.oncontextmenu = function () { return false; }
+    </script>
 
 </head>
 
-<body>
+<body oncontextmenu="return false" ondragstart="return false">
     <form id="login-form" class="hidden default">
         <!-- input required 
              : 필수 조건에 required를 걸면 꼭 입력하도록 할 수 있다. ㅠㅠ ㅠㅠㅠ 
@@ -48,6 +51,7 @@
 
     <form id="todo-form" class="default hidden">
         <input required type="text" placeholder="What to do?">
+        <button>+</button>
     </form>
 
 
@@ -94,7 +98,7 @@
 
     <div class="sticky photos">
         <div class="stickyTitle">PHOTOS</div>
-        <p>The background photos are taken in New York, 2019. <br>These are my love, sunshine and memories.</p>
+        <p>The photos and videos are taken in New York, 2019. <br>These are my love, sunshine and memories.</p>
 
     </div>
 

@@ -45,9 +45,9 @@ So, ... Let's get started.
 -   모든 자료형, 변수 다 넣을 수 있다
 
 ```javascript
-const arr = ['apple', 'orange'];
+const arr = ["apple", "orange"];
 console.log(arr); // apple, orange 2개 출력
-arr.push('lemon');
+arr.push("lemon");
 console.log(arr); // apple, orange, lemon 3개 출력
 // * 배열에서 뒤에 삽입 시에 push() 사용. (object와 헷갈리지 말 것)
 ```
@@ -77,7 +77,7 @@ console.log(arr); // apple, orange, lemon 3개 출력
 const info = {
     name: kim,
     gender: female,
-    favMovies: ['LOTR', 'Harrypotter'],
+    favMovies: ["LOTR", "Harrypotter"],
     FavFood: [
         {
             name: hamburger,
@@ -124,16 +124,16 @@ const calculator = {
 
 // const plus = calculrator.plus(4,2);
 const plus = (a, b) =>
-    document.write(calculrator.plus(a, b) + '</br>');
+    document.write(calculrator.plus(a, b) + "</br>");
 plus(4, 2);
 
 const minus = document.write(calculrator.minus(2, 4));
-document.write('<br>');
+document.write("<br>");
 
 const mult = (a, b) => document.write(calculrator.mult(a, b));
 mult(5, 9);
 
-document.write('<br>');
+document.write("<br>");
 ```
 
 -   여기서 return을 적용해서 분리하면 값을 얻고 재정의할 수 있게 된다.
@@ -173,7 +173,7 @@ console.log("hello");   // 실행 X
 -   string -> number
 
 ```javascript
-const age = prompt('How r u?');
+const age = prompt("How r u?");
 
 console.log(age); // prompt창에 입력한 수가 출력됨
 console.log(typeof age); // string
@@ -183,7 +183,7 @@ parseInt(age); // number
 console.log(age, typeof age); // 입력값, number
 
 // 만약, prompt 입력값이 숫자가 아닐 경우
-age = 'abcd';
+age = "abcd";
 parseInt(age); // NaN
 console.log(age, typeof age); // abcd, NaN
 // 이런 식으로 입력값이 숫자인지 아닌지 구별할 수 있다.
@@ -202,7 +202,7 @@ const age = 12;
 console.log(isNaN(age)); // false
 
 if (isNaN(age)) {
-    console.log('Please write a number');
+    console.log("Please write a number");
 }
 ```
 
@@ -218,45 +218,52 @@ const age = 100;
 
 // case 1
 if (age > 80) {
-    console.log('hi');
+    console.log("hi");
 } else if (age === 100) {
-    console.log('wow');
+    console.log("wow");
 }
 // case 1은 먼저 age>80이 조건이 먼저 성립되기 때문에 age === 100 조건이 true이더라도 두번째 조건은 실행되지 않는다.
 // 이 조건을 실행하고 싶다면 코드의 순서를 바꿔야 한다.
 
 // case 2
 if (age === 100) {
-    console.log('wow');
+    console.log("wow");
 } else if (age > 80) {
-    console.log('hi');
+    console.log("hi");
 }
 // case 2는 먼저 100과 일치하는지 조건을 먼저 검사하기 때문에 두 가지 조건 모두 실행할 수 있게 된다.
 
 // Or, else if가 아닌 다른 if문으로 분기하면 두가지 모두 실행할 수 있게 된다.
 ```
 
+### Math
+
+-   Math.random() : 0-1 사이 소수점이 붙은 숫자를 반환
+-   Math.round(1.2) ==> 1 : 소수점 반올림
+-   Math.ceil(1.2) ==> 2 : 올림
+-   Math.floor(1.9) ==> 1 : 내림
+
 ### addEventListener()
 
 -   어떠한 이벤트를 실행하기 위함
 
 ```javascript
-const title = document.querySelector('div.hello:first-child hi');
+const title = document.querySelector("div.hello:first-child hi");
 
 // 이벤트에 할당할 함수
 function handleClick() {
-    alert('Clicked!');
+    alert("Clicked!");
 }
 
 // "click" 이벤트를 발생시키겠다.
 // click -> function 실행
-title.addEventListener('click', handleClick);
+title.addEventListener("click", handleClick);
 
 // "function()"으로 호출하면 클릭 시에 함수가 호출되는 것이 아니라 즉시 실행이 된다.
 
 // 아래와 같은 로직으로 실행됨
 function handleClick() {
-    alert('Clicked!');
+    alert("Clicked!");
 }
 handleClick();
 
@@ -271,9 +278,15 @@ handleClick();
 
 ```javascript
 // ex)
-title.addEventListener('click', handleClick);
+title.addEventListener("click", handleClick);
 // 이 형태는 아래와 같은 작용
 title.onClick = handleClick;
 
 // but, add~형태는 removeEventListener을 통해서 eventListener을 제거할 수 있어 컨트롤이 더 편리함 (개인에 따라..)
 ```
+
+### Sticky 참고
+
+-   *https://heodolf.tistory.com/105* \*\*
+-   https://ko.javascript.info/mouse-drag-and-drop
+-   https://homzzang.com/b/js-1479
