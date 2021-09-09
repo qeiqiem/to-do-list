@@ -7,7 +7,15 @@
 
 <br>
 
-## OMG. (21/07/08)
+## ISSUES...
+
+-   개선하고 싶은 사항
+
+    -   draggable element가 sticky박스에 한정돼 있는데, 문제는 이 박스가 가장 하단에 있어서 여백을 element의 여백을 잡아야만 드래깅이 가능하다. z-index를 주고 바꿔보려고 했지만 잘 안 풀렸다. 뭔가 해결 방법을 알고 싶은데 ..
+
+    -   form tag 자체 혹은 바깥에 div로 감싸서 sticky 클래스를 적용하면 form input 타이핑 불가. button은 눌림. z-index input, form을 적용해도 안됨..
+
+## OMG... (21/07/08)
 
 I JUST GOT FOUND THE COURSE WAS UPDATED TO 2021 VERSION. <br>
 I THINK I NEED TO DO IT AGAIN WITH THE NEW VERSION.
