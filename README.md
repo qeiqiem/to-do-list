@@ -279,6 +279,10 @@ handleClick();
 // js로 내가 원하는 타이밍을 제어하는 것
 ```
 
+-   addEventListener() VS onclick()
+    -   `onclick`은 과거부터 행해오던 HTML inline 방식이지만, 전역으로 변수를 설정해주는 것과 같은 로직이라 다른 라이브러리들과 충돌이 날 가능성이 높다. 에러 발생을 줄일 수 있고, 내용과 기능의 분리가 되면 더 좋으니 `addEventListener`의 사용이 권장된다.
+    -   참고 : https://unikys.tistory.com/312
+
 ### More Events...
 
 -   MDN 사이트에서 적용 가능한 이벤트가 어떤 것이 있는지 검색해보자.
